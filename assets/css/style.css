@@ -8,65 +8,122 @@
 
 #logo {
     font-weight: 380;
-    font-size: 18px;
+    font-size: 1.25em;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 100px;
-    padding: 5px 40px;
-    border-radius: 30px;
-
-
+    margin: 0vh 3vh 3vh 3vw;
+    padding: 2vh 4vw 0 4vw;
+    border-radius: 3vh;
 }
 
 header .containerNav1 {
     text-align: center;
-    width: 140px;
-    padding: 15px;
+    width: 10vw;
+    padding: 2vh;
     cursor: pointer;
 }
 
 header a {
-    color: black;
+    color: white !important;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.4vw;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
 /* ---------------------------------------------------------------HOME--------------------------------------------------------------- */
+.backgound {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/space.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
 
 #home {
     justify-content: center;
     align-items: center;
-    margin: 50px 150px 0 150px;
+    margin: 5vh 10vw 0 10vw;
+    border-radius: 10vw;
+    padding: 4vw;
+    transition: all 0.3s ease-in-out;
+}
+
+#home:hover {
+    transform: scale(1.05);
 }
 
 #home h1,
 h2 {
     text-align: center;
-    font-size: 100px;
+    font-size: 7vw;
     font-weight: 300;
+    color: white !important;
 }
 
-#home .containerNav2 {
+.containerNav2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    justify-content: center;
-
+    margin-top: 6vh;
 }
 
-#home .containerNav2 a {
+.containerNav2 a {
     text-align: center;
     text-decoration: none;
     color: white;
-    margin: 0 100px;
-    font-size: 20px;
-    padding: 20px;
-    border-radius: 30px;
-    background-color: red;
+    margin: 0 10vw;
+    font-size: 2vw;
+    padding: 2vh 4vw;
+    border-radius: 3vh;
+    background-color: #8B93B5;
+}
+
+.containerNav2 a:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries para telas menores */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        margin: 5vh 5vw;
+        padding: 2vh 2vw;
+        border-radius: 3vh;
+    }
+
+    header .containerNav1 {
+        width: auto;
+    }
+
+    header a {
+        font-size: 4vw;
+    }
+
+    #home {
+        margin: 5vh 5vw 0 5vw;
+        padding: 4vw;
+        border-radius: 5vw;
+    }
+
+    #home h1,
+    h2 {
+        font-size: 10vw;
+    }
+
+    .containerNav2 {
+        flex-direction: column;
+        margin-top: 8vh;
+    }
+
+    .containerNav2 a {
+        margin: 2vh 0;
+        font-size: 4vw;
+        padding: 2vh 4vw;
+        border-radius: 3vh;
+    }
 }
