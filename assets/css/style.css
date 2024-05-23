@@ -5,6 +5,10 @@
     user-select: none !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------------------------------------------------------------HEADER--------------------------------------------------------------- */
 
 #logo {
@@ -16,7 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0vh 3vh 3vh 3vw;
+    margin: 0vh 3vw 3vh 3vw;
     padding: 2vh 4vw 0 4vw;
     border-radius: 3vh;
 }
@@ -38,7 +42,7 @@ header a {
 
 /* ---------------------------------------------------------------HOME--------------------------------------------------------------- */
 .background {
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     background-image: url("../img/space.jpg") !important;
     background-size: cover;
@@ -91,14 +95,7 @@ h2 {
     background-color: transparent;
 }
 
-
-
-
-
-
-
-
-/* ------------------------------------------------------Media Queries para telas menores ---------------------------------------------------------------------------------*/
+/* Media Queries para telas menores */
 @media only screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -150,5 +147,133 @@ h2 {
         border-radius: 3vh;
         width: 20vh;
 
+    }
+}
+
+/*------------------------------------------------------ ABOUT ------------------------------------------------------ */
+
+#about {
+    display: flex;
+    width: fit-content;
+    height: 100vh;
+    background-color: #454240;
+}
+
+#euMesmo {
+    height: 100vh;
+    width: 60vw;
+}
+
+.textAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    margin: 0 10vw;
+    color: rgb(183, 183, 183);
+}
+
+.btnClass {
+    text-align: center;
+    margin-bottom: 1vh;
+    background-color: #060606;
+    color: white;
+    width: fit-content;
+    padding: 0.3vw 1.86vh;
+    border-radius: 60px;
+}
+
+#writingIntroduction {
+    margin: 2.5vh 0;
+    font-family: monospace;
+    font-size: 2rem;
+    border-right: 4px solid;
+    width: 19ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 8s steps(38) 1s infinite, blinking 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    45% {
+        width: 19ch;
+    }
+
+    55% {
+        width: 19ch;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#textIntroduction {
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+#textMoreIntroduction {
+    display: none;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.btnVerMais {
+    text-align: center;
+    margin-bottom: 1vh;
+    background-color: #060606;
+    color: white;
+    width: fit-content;
+    padding: 0.7vh 1.8vw;
+    border-radius: 60px;
+}
+
+
+/* Media Queries para telas menores */
+
+@media only screen and (max-width: 768px) {
+    #about {
+        flex-direction: column;
+    }
+
+    #euMesmo {
+        display: flex;
+        border-radius: 80%;
+        height: 200px;
+        width: 200px;
+        margin: 5vh auto;
+    }
+
+    .btnClass {
+        display: flex;
+        margin: 1vh auto;
+    }
+
+    #writingIntroduction {
+        font-size: 1.5rem;
+    }
+
+
+    #textIntroduction {
+        font-size: 1rem;
+    }
+
+    .btnVerMais {
+        margin: 3vh auto 0 auto;
+    }
+
+    #textMoreIntroduction {
+        font-size: 1rem;
     }
 }
