@@ -13,7 +13,7 @@ html {
 
 #logo {
     font-weight: 380;
-    font-size: 1.25em;
+    font-size: 1.3em;
 }
 
 header {
@@ -32,21 +32,85 @@ header .containerNav1 {
     cursor: pointer;
 }
 
-header a {
+.containerNav1 a {
     color: white !important;
     text-decoration: none;
     font-size: 1.4vw;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
+
+    text-decoration: none;
+    color: #000;
+    position: relative;
 }
+
+.containerNav1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Ajuste conforme necessário */
+    width: 0;
+    height: 2px;
+    /* Ajuste conforme necessário */
+    background-color: #fff;
+    /* Cor da linha */
+    transition: width 0.3s ease;
+}
+
+.containerNav1 a:hover::after {
+    width: 100%;
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.containerNav1 a:hover::after {
+    animation: expand 0.3s ease-in-out;
+}
+
 
 /* ---------------------------------------------------------------HOME--------------------------------------------------------------- */
 .background {
+    /* Necessário para o posicionamento do pseudoelemento */
+    position: relative;
     height: 110vh;
     width: 100%;
-    background-image: url("../img/space.jpg") !important;
+    /* Garante que o pseudoelemento não exceda o container */
+    overflow: hidden;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/space.jpg");
     background-size: cover;
     background-position: center;
+    filter: blur(0.5px);
+    /* Coloca a imagem atrás do conteúdo */
+    z-index: -1;
+}
+
+.principal {
+    /* Garante que o conteúdo principal fique acima do pseudoelemento */
+    position: relative;
+    /* Nível de sobreposição */
+    z-index: 1;
+    /* Garantia de que não tenha filtro aplicado */
+    filter: none;
+    border: none !important;
+
 }
 
 #home {
@@ -59,15 +123,48 @@ header a {
 }
 
 #home:hover {
-    transform: scale(1.05);
+    transform: scale(0.9);
 }
 
 #home h1,
-h2 {
+#home h2 {
     text-align: center;
-    font-size: 7vw;
+    font-size: 6vw;
     font-weight: 300;
-    color: white !important;
+    color: white;
+
+    /* EFEITO DE BRILHO */
+    background: linear-gradient(135deg,
+            rgb(162, 162, 162) 40%,
+            #FFFFFF 20%,
+            rgb(255, 255, 255) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Suporte para navegadores WebKit */
+    color: transparent;
+    animation: animated 5s linear infinite;
+    background-size: 200% auto;
+    /* Altera o tamanho do background para a animação */
+}
+
+@keyframes animated {
+    0% {
+        background-position: 200% 0;
+    }
+
+    40% {
+        background-position: 100% 0;
+
+    }
+
+    80% {
+        background-position: -100% 0;
+
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .containerNav2 {
@@ -90,7 +187,7 @@ h2 {
 }
 
 .containerNav2 a:hover {
-    transform: scale(1.05);
+    transform: scale(0.8);
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5), 0 0 40px 10px rgba(255, 255, 255, 0.3), 0 0 60px 15px rgba(255, 255, 255, 0.2);
     background-color: transparent;
 }
@@ -102,6 +199,11 @@ h2 {
         margin: 0vh 5vw;
         padding: 2vh 2vw;
         border-radius: 3vh;
+    }
+
+    #logo {
+        font-weight: 380;
+        font-size: 1.25em;
     }
 
     #sobre,
@@ -141,9 +243,9 @@ h2 {
     }
 
     .containerNav2 a {
-        margin: 2vh 0;
+        margin: 2vh 2vw;
         font-size: 4vw;
-        padding: 2vh 4vw;
+        padding: 2vh 2vw;
         border-radius: 3vh;
         width: 20vh;
 
@@ -154,7 +256,7 @@ h2 {
 
 #about {
     display: flex;
-    width: fit-content;
+    width: 100%;
     height: 100vh;
     background-color: #454240;
 }
@@ -171,6 +273,8 @@ h2 {
     text-align: justify;
     margin: 0 10vw;
     color: rgb(183, 183, 183);
+    max-width: 592px;
+
 }
 
 .btnClass {
@@ -229,15 +333,38 @@ h2 {
     font-size: 1.2rem;
 }
 
-.btnVerMais {
-    text-align: center;
-    margin-bottom: 1vh;
-    background-color: #060606;
-    color: white;
-    width: fit-content;
-    padding: 0.7vh 1.8vw;
-    border-radius: 60px;
+/* USADO PARA MOSTRAR CONTEUDO EXTRA DO ABOUT */
+#textMoreIntroduction.show {
+    display: block;
 }
+
+.btnVerMais {
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    margin: 1vh auto 0 auto;
+    color: #fff;
+    padding: 0.7vh 1.8vw;
+    border: none;
+    background-color: #8b8b8b6c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnVerMais:hover {
+    background-color: #00b33081;
+    transform: scale(1.05);
+}
+
+.btnVerMais:focus {
+    outline: none;
+}
+
+.btnVerMais:active {
+    transform: scale(0.9);
+}
+
 
 
 /* Media Queries para telas menores */
@@ -245,6 +372,12 @@ h2 {
 @media only screen and (max-width: 768px) {
     #about {
         flex-direction: column;
+        height: 100vh;
+    }
+
+    /* DEIXAR DINAMICA FORMA DE MUDAR A ALTURA DA PÁGINA */
+    #about.show {
+        height: fit-content;
     }
 
     #euMesmo {
@@ -270,7 +403,7 @@ h2 {
     }
 
     .btnVerMais {
-        margin: 3vh auto 0 auto;
+        margin: 3vh auto;
     }
 
     #textMoreIntroduction {

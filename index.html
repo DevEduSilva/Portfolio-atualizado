@@ -11,30 +11,32 @@
 <body id="inicio">
     <!-- PÁGINA PRINCIPAL COM HEADER TAMBÉM -->
     <div class="background">
+        <div class="principal">
+            <!-- header-PRINCIPAL -->
+            <header>
+                <div class="containerNav1" id='sobre'>
+                    <a href="/#about">SOBRE MIM</a>
+                </div>
+                <div class="containerNav1" id='logo'>
+                    <a href="/#inicio" id="logo"><strong>Dev</strong>EduSilva</a>
+                </div>
+                <div class="containerNav1" id='contato'>
+                    <a href="/#faleComigo">FALE COMIGO</a>
+                </div>
+            </header>
 
-        <!-- header-PRINCIPAL -->
-        <header>
-            <div class="containerNav1" id='sobre'>
-                <a href="/#about">SOBRE</a>
+            <div id="home">
+                <h1>Desenvolvedor Front-End</h1>
+                <h2 style="font-weight: 400;">Eduardo Silva</h2>
             </div>
-            <div class="containerNav1" id='logo'>
-                <a href="/#inicio" id="logo"><strong>Dev</strong>EduSilva</a>
+            <div class="containerNav2">
+                <a href="/#about" id="sobre2" style="display: none;">SOBRE MIM</a>
+                <a href="/#projetos"> PROJETOS</a>
+                <a href="/#servico"> CONTATO</a>
             </div>
-            <div class="containerNav1" id='contato'>
-                <a href="/#faleComigo">FALE COMIGO</a>
-            </div>
-        </header>
-
-        <div id="home">
-            <h1>Desenvolvedor Web</h1>
-            <h2>Eduardo Silva</h2>
-        </div>
-        <div class="containerNav2">
-            <a href="/#about" id="sobre2" style="display: none;">Sobre mim</a>
-            <a href="/#projetos"> Projetos</a>
-            <a href="/#servico">Contato</a>
         </div>
     </div>
+
 
     <div id="about">
         <img id="euMesmo" src="assets/img/Eu.jpg" alt="Eu, Eduardo, admirando o mar e pensando">
@@ -47,10 +49,11 @@
                 estrelas enquanto busco facilitar a vida com soluções tecnológicas. A programação, para mim, é uma
                 jornada contínua de descoberta e inovação.
             </p>
-            <p id="textMoreIntroduction"><br>
+            <br>
+            <p id="textMoreIntroduction">
                 Me formei em Análise e Desenvolvimento de Sistemas,e atualmente faço cursos em diversas
                 plataformas para cada vez mais ser melhor do que eu acredito ser. Eu, atualmente, sou um desenvolvedor
-                autônomo e faço algumas páginas do estilo Landing Page, mas sempre que posso eu tento inovar <br> <br>
+                autônomo e faço algumas páginas do estilo Landing Page, mas sempre que posso eu tento inovar. <br> <br>
 
                 Estou sempre em busca de novos desafios e oportunidades para aprender e crescer, navegando por
                 diferentes linguagens e frameworks como um explorador curioso. Acredito que a tecnologia tem o poder de
@@ -59,10 +62,13 @@
                 Confira mais abaixo alguns projetos meus.
             </p>
 
-            <button type="button" class="btnVerMais">Ver mais...</button>
-            
+            <button type="button" class="btnVerMais" id="btnVerMais">VER MAIS...</button>
+
+
         </div>
     </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
