@@ -466,6 +466,27 @@ header .containerNav1 {
     justify-content: center;
     align-items: center;
     color: #fff;
+    display: flex;
+}
+
+.btnNext,
+.btnPrevious {
+    margin-left: 5px;
+    font-size: 4vw;
+    background: transparent;
+    border: none !important;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.btnPrevious {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.btnNext:hover,
+.btnPrevious:hover {
+    transform: scale(1.2);
 }
 
 .conteudo {
@@ -604,12 +625,12 @@ header .containerNav1 {
     }
 
     .conteudo {
-        width: 90vw;
+        width: 70vw;
     }
 
     .card {
-        min-height: 250px;
-        min-width: 200px;
+        height: 250px;
+        width: 200px;
         border: none;
     }
 
@@ -632,5 +653,20 @@ header .containerNav1 {
         flex-direction: row;
         justify-content: center;
 
+    }
+
+    .btnNext,
+    .btnPrevious {
+        margin-left: 15px;
+        font-size: 10vw;
+        background: transparent;
+        border: none !important;
+        color: #FFF;
+        cursor: pointer;
+    }
+
+    .btnPrevious {
+        margin-left: 0;
+        margin-right: 15px;
     }
 }
