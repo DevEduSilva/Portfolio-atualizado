@@ -4,8 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porfolio</title>
+    <title>Portfólio</title>
+
+    <!-- ESTILIZAÇÃO CSS PRINCIPAL -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- ESTILIZAÇÃO DO SLIDER -->
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <!-- ESTILIZAÇÃO DO MODAL -->
+    <link rel="stylesheet" href="assets/css/modal.css">
+
+
+
 </head>
 
 <body id="inicio">
@@ -63,12 +72,79 @@
             </p>
 
             <button type="button" class="btnVerMais" id="btnVerMais">VER MAIS...</button>
-
-
         </div>
     </div>
 
+    <div id="projetos">
+        <br>
+        <h3 class='btnClass2'>PROJETOS</h3>
+        <img src="assets/img/astronaut.png" id="astronaut" alt="Super-Astronauta" srcset="">
+        <p class="projetosinformacao">Um pouco das viagens pelo o meu universo:</p>
+        <div id="containerSlide">
+
+            <div class="slide">
+                <div class="conteudo">
+                    <div class="carrousel" id="carrousel">
+                        <article class="card">
+                            <button class="btnClass3" id="btnClass3">Detalhes</button>
+                            <div class="mostrarHover">
+                                <h1>Salva-Carteiras</h1>
+                                <p>Calculadora de compras mensais!</p>
+                                <div class="containerDetailHover">
+                                    <a href="https://github.com/DevEduSilva/SalvaCarteira" target="_blank">REPOSITÓRIO</a>
+                                    <p>||</p>
+                                    <a href="https://salvacarteiraedu.netlify.app/" target="_blank">DEPLOY</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <button class="btnClass3" id="btnClass3">Detalhes</button>
+
+                            <div class="mostrarHover">
+                                <h1>Pokedex-Js</h1>
+                                <p>Pokedex da 1ª Geração</p>
+                                <div class="containerDetailHover">
+                                    <a href="https://github.com/DevEduSilva/Pokedex-Js" target="_blank">REPOSITÓRIO</a>
+                                    <p>||</p>
+                                    <a href="https://pokedex-javascript-developer.netlify.app/" target="_blank">DEPLOY</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <button class="btnClass3" id="btnClass3">Detalhes</button>
+
+                        </article>
+                        <article class="card">
+
+                            <button class="btnClass3" id="btnClass3">Detalhes</button>
+
+                        </article>
+                        <article class="card">
+                            <button class="btnClass3" id="btnClass3">Detalhes</button>
+
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS PRINCIPAL -->
     <script src="assets/js/script.js"></script>
+    <!-- PARA FAZER O SLIDER FUNCIONAR -->
+    <script src="assets/js/slider.js"></script>
+    <!-- PARA FAZER O MODAL FUNCIONAR -->
+    <script src="assets/js/modal.js"></script>
+
 </body>
 
 </html>
