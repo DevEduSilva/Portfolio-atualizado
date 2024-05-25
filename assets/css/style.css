@@ -238,7 +238,7 @@ header .containerNav1 {
         flex-direction: row;
         gap: 20px;
         margin-top: 8vh;
-        margin-top: 15vh;
+        margin-top: 10vh;
     }
 
     .containerNav2 a {
@@ -422,6 +422,8 @@ header .containerNav1 {
     margin: 0;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 3vh;
 }
 
 .btnClass2 {
@@ -669,4 +671,255 @@ header .containerNav1 {
         margin-left: 0;
         margin-right: 15px;
     }
+}
+
+/* ----------------------------------------------- FALE COMIGO ----------------------------------------------- */
+
+#faleComigo {
+    height: calc(100vh - 65px);
+    width: 100%;
+    background-color: #060918;
+    padding-top: 1vw;
+    font-family: monospace;
+    color: white;
+}
+
+.btnClass4 {
+    text-align: center;
+    margin: 4vh auto;
+    color: white;
+    width: fit-content;
+    border-bottom: 1px solid white;
+    padding: 0.3vw 1.86vh;
+    font-size: x-large;
+}
+
+.containerMensagemEForm {
+    display: flex;
+    flex-direction: flex;
+    /* Alterado para coluna para dispositivos menores */
+    gap: 10px;
+    margin: 4vh 4vw 0 4vw;
+}
+
+.containerMensagem {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 55vw;
+}
+
+.mensagemPrincipal {
+    font-size: 3rem;
+    margin: 3vh 0;
+    font-weight: 500;
+}
+
+.mensagemSecundaria {
+    font-size: 1.4rem;
+    margin: 0 0 0 2vw;
+    font-weight: 200;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    /* Flex direction column for better mobile responsiveness */
+    gap: 10px;
+    margin: 0;
+}
+
+.containerForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 4vw 0 4vw;
+}
+
+.containerForm label {
+    font-weight: 700;
+    font-style: oblique;
+}
+
+.containerForm form input[type="text"],
+.containerForm form input[type="email"],
+.containerForm textarea {
+    width: 29vw;
+    background-color: transparent;
+    color: white;
+    box-shadow: 1px 1px 5px #FFF;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    padding: 6px;
+}
+
+.containerForm textarea {
+    height: 150px;
+    padding: 10px;
+    resize: none;
+    user-select: none;
+}
+
+.containerForm button {
+    color: white;
+    background: green;
+    border: none;
+    padding: 4px;
+    font-size: 1.1rem;
+    width: 8rem;
+    align-self: flex-end;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.containerForm button:hover {
+    color: white;
+    font-weight: 800;
+    background-color: #14a80c;
+}
+
+/* Media Queries */
+
+/* Para dispositivos móveis (smartphones) */
+@media (max-width: 768px) {
+    .containerMensagemEForm {
+        display: flex;
+        flex-direction: column;
+        /* Alterado para coluna para dispositivos menores */
+        gap: 10px;
+        margin: 4vh 4vw 0 4vw;
+    }
+
+    .mensagemPrincipal {
+        font-size: 2rem;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .mensagemSecundaria {
+        font-size: 1rem;
+        width: 90vw;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .containerForm form input[type="text"],
+    .containerForm form input[type="email"],
+    .containerForm textarea {
+        width: 90%;
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .containerForm button {
+        width: 100%;
+        align-self: center;
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .containerMensagemEForm {
+        display: flex;
+        flex-direction: column;
+        /* Alterado para coluna para dispositivos menores */
+        gap: 10px;
+        margin: 4vh 4vw 0 4vw;
+    }
+
+    .mensagemPrincipal {
+        font-size: 2.5rem;
+    }
+
+    .mensagemSecundaria {
+        font-size: 1.2rem;
+    }
+
+    .containerForm form input[type="text"],
+    .containerForm form input[type="email"],
+    .containerForm textarea {
+        width: 80%;
+        max-width: 100%;
+    }
+
+    .containerForm button {
+        width: 50%;
+        align-self: center;
+        padding: 8px;
+        font-size: 1.1rem;
+    }
+}
+
+/* ---------------------------------------------- FOOTER ---------------------------------------------- */
+
+footer {
+    background-color: #010204;
+    color: white;
+    text-align: center;
+    padding: 10px 40px;
+    font-size: 1.1rem;
+    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Certifica-se de que o conteúdo está centralizado verticalmente */
+    margin: 0;
+    user-select: none;
+}
+
+#logo2 {
+    font-weight: 380;
+    font-size: 1.2em;
+}
+
+#redesSociais {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    /* Espaçamento entre os ícones */
+    justify-content: center;
+    /* Centraliza os ícones */
+}
+
+.redeSocial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.redeSocial svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.redeSocial:hover svg {
+    fill: #3c4987;
+}
+
+.copyrite {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+
+/* Para dispositivos móveis (smartphones) */
+@media  (max-width: 768px) {
+    #logo2 {
+        display: none;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
 }
