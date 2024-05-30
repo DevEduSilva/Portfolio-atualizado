@@ -193,7 +193,7 @@ header .containerNav1 {
 }
 
 /* Media Queries para telas menores */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         margin: 0vh 5vw;
@@ -370,7 +370,7 @@ header .containerNav1 {
 
 /* Media Queries para telas menores */
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     #about {
         flex-direction: column;
         height: 100vh;
@@ -384,8 +384,8 @@ header .containerNav1 {
     #euMesmo {
         display: flex;
         border-radius: 80%;
-        height: 200px;
-        width: 200px;
+        height: 21vh;
+        width: 40vw;
         margin: 5vh auto;
     }
 
@@ -517,14 +517,15 @@ header .containerNav1 {
 .card {
     scroll-snap-align: start;
     border-radius: 30px;
+    max-height: 200px;
     height: 200px;
+    max-width: 200px;
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #001f3f;
-    background-image: radial-gradient(#000000 0%, #001f3f 80%);
     color: #FFF;
     position: relative;
 }
@@ -621,7 +622,7 @@ header .containerNav1 {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     #containerSlide {
         width: 80vw;
         margin: 0 auto;
@@ -639,14 +640,14 @@ header .containerNav1 {
 
     #astronaut {
         display: flex;
-        width: 60vw;
+        width: 40vw;
         margin: 3vh auto;
     }
 
     .projetosinformacao {
         text-align: center;
         font-size: 2rem;
-        margin: 0 0 3vh 0;
+        margin: 3vh 2vw;
         font-family: monospace;
     }
 
@@ -672,12 +673,27 @@ header .containerNav1 {
         margin-left: 0;
         margin-right: 15px;
     }
+
+    .btnClass3 {
+        text-align: center;
+        color: black;
+        border: none;
+        padding: 15px 30px;
+        box-shadow: 1px 6px 10px black;
+        justify-content: end;
+        margin-bottom: 45px;
+        transition: .3s linear;
+        background-color: whitesmoke;
+        border-radius: 25px;
+        cursor: pointer;
+        z-index: 1;
+    }
 }
 
 /* ----------------------------------------------- FALE COMIGO ----------------------------------------------- */
 
 #faleComigo {
-    height: calc(100vh - 65px);
+    height: 100vh;
     width: 100%;
     background-color: #060918;
     padding-top: 1vw;
@@ -756,7 +772,7 @@ header .containerNav1 {
 }
 
 .containerForm textarea {
-    height: 150px;
+    height: 23vh;
     padding: 10px;
     resize: none;
     user-select: none;
@@ -780,10 +796,14 @@ header .containerNav1 {
     background-color: #14a80c;
 }
 
-/* Media Queries */
+/* Media Queries para dispositivos móveis */
 
-/* Para dispositivos móveis (smartphones) */
 @media (max-width: 768px) {
+    #faleComigo {
+        height: 120vh;
+        padding-bottom: 20px;
+    }
+
     .containerMensagemEForm {
         display: flex;
         flex-direction: column;
@@ -800,7 +820,7 @@ header .containerNav1 {
 
     .mensagemSecundaria {
         font-size: 1rem;
-        width: 90vw;
+        width: 80vw;
         text-align: center;
         margin-bottom: 20px;
     }
@@ -819,40 +839,19 @@ header .containerNav1 {
         padding: 10px;
         font-size: 1rem;
     }
+
+
 }
 
-/* Para tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .containerMensagemEForm {
-        display: flex;
-        flex-direction: column;
-        /* Alterado para coluna para dispositivos menores */
-        gap: 10px;
-        margin: 4vh 4vw 0 4vw;
-    }
-
-    .mensagemPrincipal {
-        font-size: 2.5rem;
-    }
-
-    .mensagemSecundaria {
-        font-size: 1.2rem;
-    }
-
-    .containerForm form input[type="text"],
-    .containerForm form input[type="email"],
-    .containerForm textarea {
-        width: 80%;
-        max-width: 100%;
-    }
-
-    .containerForm button {
-        width: 50%;
-        align-self: center;
-        padding: 8px;
-        font-size: 1.1rem;
+/* para telas maiores */
+@media (min-width: 1024px) and (max-width:1366px) {
+    #faleComigo {
+        height: 80vh;
+        padding-bottom: 20px;
     }
 }
+
+
 
 /* ---------------------------------------------- FOOTER ---------------------------------------------- */
 
@@ -918,20 +917,31 @@ footer {
     #logo2 {
         display: none;
     }
+
+    footer {
+        background-color: #010204;
+        color: white;
+        text-align: center;
+        padding: 10px 40px;
+        font-size: 1.1rem;
+        font-family: monospace;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* Certifica-se de que o conteúdo está centralizado verticalmente */
+        user-select: none;
+        gap: 10px
+    }
 }
 
-/* Para tablets */
-@media (min-width: 769px) and (max-width: 1024px) {}
-
 /* BTN PRA SUBIR */
-
 .seta {
     display: none;
     background-color: white;
     border-radius: 60px;
     position: fixed;
     padding: 10px;
-    top: 90%;
+    top: 78%;
     right: 2%;
     font-weight: 800;
     font-size: 1.5rem;
