@@ -9,6 +9,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* USADO PARA OCULTAR  AS BARRAS DE ROLAGEM*/
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* ---------------------------------------------------------------HEADER--------------------------------------------------------------- */
 
 #logo {
@@ -97,7 +102,7 @@ header .containerNav1 {
     background-image: url("../img/space.jpg");
     background-size: cover;
     background-position: center;
-    filter: blur(0.5px);
+    filter: blur(0.25px);
     /* Coloca a imagem atrás do conteúdo */
     z-index: -1;
 }
@@ -212,7 +217,7 @@ header .containerNav1 {
     }
 
     #sobre2 {
-        display: flex !important;
+        display: inline !important;
     }
 
     header .containerNav1 {
@@ -224,7 +229,7 @@ header .containerNav1 {
     }
 
     #home {
-        margin: 5vh 5vw 0 5vw;
+        margin: 0vh 5vw 0 5vw;
         padding: 4vw;
         border-radius: 5vw;
         margin-top: 20vh;
@@ -236,8 +241,8 @@ header .containerNav1 {
     }
 
     .containerNav2 {
-        flex-direction: row;
-        gap: 20px;
+        flex-direction: column;
+        gap: 10px !important;
         margin-top: 8vh;
         margin-top: 10vh;
     }
@@ -248,6 +253,15 @@ header .containerNav1 {
         padding: 2vh 2vw;
         border-radius: 3vh;
         width: 20vh;
+
+    }
+}
+
+@media (min-width: 769px)and (max-width:1366px) {
+    #home {
+        margin: 25vh 5vw;
+        padding: 4vw;
+        border-radius: 5vw;
 
     }
 }
@@ -412,6 +426,27 @@ header .containerNav1 {
     }
 }
 
+/* telas maiores */
+@media (min-width: 769px)and (max-width:1366px) {
+    #euMesmo {
+        height: 60vh;
+        width: 50vw;
+        border-radius: 40%;
+        margin: 15vh auto;
+        transform: scale(0.8);
+    }
+
+    .textAbout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        margin: 0 3.5vw;
+        color: rgb(183, 183, 183);
+        max-width: 592px;
+
+    }
+}
 
 /* ------------------------------- PROJETOS -------------------------------  */
 
@@ -690,12 +725,34 @@ header .containerNav1 {
     }
 }
 
-@media (min-width: 1700px) and (max-width: 1920px) {
+@media (min-width: 769px)and (max-width:1366px) {
+    #astronaut {
+        display: flex;
+        width: 40vw;
+        margin: 3vh auto;
+    }
+
     #carrousel {
-        height: 25vh;
+        height: 20vh;
         margin: 0 auto;
     }
+
+    .containerDetailHover {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
 }
+
+@media (min-width: 1367px) {
+    .carrousel {
+        height: 220px;
+    }
+
+}
+
 /* ----------------------------------------------- FALE COMIGO ----------------------------------------------- */
 
 #faleComigo {
@@ -806,7 +863,7 @@ header .containerNav1 {
 
 @media (max-width: 768px) {
     #faleComigo {
-        height: 120vh;
+        height: fit-content;
         padding-bottom: 20px;
     }
 
@@ -850,14 +907,27 @@ header .containerNav1 {
 }
 
 /* para telas maiores */
-@media (min-width: 1024px) and (max-width:1366px) {
+@media (min-width: 769px)and (max-width:1366px) {
     #faleComigo {
         height: 80vh;
         padding-bottom: 20px;
     }
+
+    .containerMensagemEForm {
+        margin-top: 200px;
+    }
 }
 
+@media (min-width: 1367px) {
+    .carrousel {
+        height: 220px;
+    }
 
+    .containerMensagemEForm {
+        margin-top: 260px;
+    }
+
+}
 
 /* ---------------------------------------------- FOOTER ---------------------------------------------- */
 
