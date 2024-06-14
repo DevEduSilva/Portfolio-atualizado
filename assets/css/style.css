@@ -257,6 +257,14 @@ header .containerNav1 {
     }
 }
 
+@media (min-width: 1367px)  and (max-width:1366px) {
+    #home {
+        margin: 25vh 5vw;
+        padding: 4vw;
+        border-radius: 5vw;
+
+    }
+}
 
 /*------------------------------------------------------ ABOUT ------------------------------------------------------ */
 
@@ -418,7 +426,27 @@ header .containerNav1 {
     }
 }
 
+/* telas maiores */
+@media (min-width: 1367px) and (max-width:1920px) {
+    #euMesmo {
+        height: 60vh;
+        width: 50vw;
+        border-radius: 40%;
+        margin: 15vh auto;
+        transform: scale(0.8);
+    }
 
+    .textAbout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        margin: 0 14vw;
+        color: rgb(183, 183, 183);
+        max-width: 592px;
+
+    }
+}
 
 /* ------------------------------- PROJETOS -------------------------------  */
 
@@ -697,6 +725,33 @@ header .containerNav1 {
     }
 }
 
+@media (min-width: 1367px) and (max-width:1920px) {
+    #astronaut {
+        display: flex;
+        width: 20vw;
+        margin: 3vh auto;
+    }
+
+    #carrousel {
+        height: 22vh;
+        margin: 0 auto;
+    }
+
+    .containerDetailHover {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 1367px) {
+    .carrousel {
+        height: 220px;
+    }
+
+}
 
 /* ----------------------------------------------- FALE COMIGO ----------------------------------------------- */
 
@@ -848,6 +903,29 @@ header .containerNav1 {
         font-size: 1rem;
     }
 
+
+}
+
+/* para telas maiores */
+@media (min-width: 1367px) and (max-width:1920px) {
+    #faleComigo {
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+
+    .containerMensagemEForm {
+        margin-top: 200px;
+    }
+}
+
+@media (min-width: 1367px) {
+    .carrousel {
+        height: 220px;
+    }
+
+    .containerMensagemEForm {
+        margin-top: 150px;
+    }
 
 }
 
