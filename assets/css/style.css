@@ -257,15 +257,6 @@ header .containerNav1 {
     }
 }
 
-@media (min-width: 1367px)  and (max-width:1366px) {
-    #home {
-        margin: 25vh 5vw;
-        padding: 4vw;
-        border-radius: 5vw;
-
-    }
-}
-
 /*------------------------------------------------------ ABOUT ------------------------------------------------------ */
 
 #about {
@@ -746,13 +737,6 @@ header .containerNav1 {
 
 }
 
-@media (min-width: 1367px) {
-    .carrousel {
-        height: 220px;
-    }
-
-}
-
 /* ----------------------------------------------- FALE COMIGO ----------------------------------------------- */
 
 #faleComigo {
@@ -916,18 +900,12 @@ header .containerNav1 {
     .containerMensagemEForm {
         margin-top: 200px;
     }
-}
-
-@media (min-width: 1367px) {
+    
     .carrousel {
         height: 220px;
     }
-
-    .containerMensagemEForm {
-        margin-top: 150px;
-    }
-
 }
+
 
 /* ---------------------------------------------- FOOTER ---------------------------------------------- */
 
