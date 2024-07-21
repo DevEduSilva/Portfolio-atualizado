@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- ESTILIZAÇÃO DO MODAL -->
     <link rel="stylesheet" href="assets/css/modal.css">
+    <!-- ESTILIZAÇÃO DO AGRADECIMENTO -->
+     <link rel="stylesheet" href="assets/css/agradecimento.css">
 
     <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
 
@@ -145,8 +147,7 @@
                 <p class="mensagemSecundaria">Prepare seu traje espacial e conte-me suas ideias/problemas para desenvolver o site.</p>
             </div>
             <div class="containerForm">
-                <!-- Formspree é um serviço que simplifica o envio de dados de formulários HTML por e-mail sem a necessidade de configurar um servidor backend. -->
-                <form action="https://formspree.io/f/xleqkplk" method="post">
+                <form id="contactForm">
                     <label for="name">NOME:</label>
                     <input type="text" id="name" name="name" placeholder="Seu Nome" required>
                     
@@ -156,8 +157,10 @@
                     <label for="message">MENSAGEM:</label>
                     <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
                     
-                    <button type="submit">E N V I A R</button>
+                    <button id="btnSend" type="submit">E N V I A R</button>
                 </form>
+            
+                <p id="thankYouMessage" class="aposenvio" style="display: none;">Obrigado pela preferência!</p>
             </div>
         </div>
     </div>
@@ -207,6 +210,8 @@
     <script src="assets/js/modal.js"></script>
     <!-- PARA FAZER O BOTÃO VOLTAR PRA CIMA FUNCIONAR -->
     <script src="assets/js/btnBackToUp.js"></script>
+    <!-- PARA ENVIAR DIRETO AO WPP COM DADOS ESCRITOS -->
+     <script src="assets/js/whatsapp.js"></script>
 </body>
 
 </html>
