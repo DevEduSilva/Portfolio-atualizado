@@ -1,7 +1,3 @@
-Perfeito! Vou atualizar a estrutura do projeto no README com base nos novos arquivos na pasta `js`:
-
----
-
 # Portfolio Atualizado
 
 ## Descrição
