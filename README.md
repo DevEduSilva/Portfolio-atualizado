@@ -10,9 +10,10 @@ Este projeto é um portfólio pessoal que apresenta meus trabalhos, habilidades 
 - **Formulário de Contato:** Integração com serviços de e-mail para enviar mensagens.
 
 ## Tecnologias Utilizadas
-- HTML5
-- CSS3
-- JavaScript
+- HTML5;
+- CSS3;
+- JavaScript;
+- API do WhatsApp.
 
 ## Estrutura do Projeto
 ```plaintext
@@ -21,37 +22,30 @@ Este projeto é um portfólio pessoal que apresenta meus trabalhos, habilidades 
 │   ├── css/
 │   │   ├── agradecimento.css
 │   │   ├── modal.css
-│   │   ├── style.css
-│   └── img/
-│       ├── Eu.jpg
-│       ├── SIMPSONSGALAXY.gif
-│       ├── Work-In-Progress.jpg
-│       ├── astronaut.png
-│       ├── logo.ico
-│       ├── pokedex.png
-│       ├── salvacarteiras.png
-│       ├── space.jpg
+│   │   └── style.css
+│   ├── img/
+│   │   └── Images located above!
 │   └── js/
 │       ├── btnBackToUp.js
 │       ├── modal.js
 │       ├── script.js
 │       ├── slider.js
-│       ├── whatsapp.js
+│       └── whatsapp.js
 └── index.html
 ```
 
-## Padrão de Branches
+## Padrão de Commits
 
-Os nomes de branches são compostos de 2 partes:
+Os nomes dos commits são compostos de 2 partes:
 
-1. **Type ou Categoria do Branch:**
+1. **Type ou Categoria do Commit:**
    - `feat`: Uma nova funcionalidade.
    - `fix`: A correção de um bug.
    - `perf`: Mudança de código focada em melhorar performance.
    - `refactor`: Mudança de código que não adiciona uma funcionalidade e também não corrige um bug.
    - `style`: Mudanças no código que não afetam seu significado (espaço em branco, formatação, ponto e vírgula, etc).
 
-2. **Descrição do que o Branch Faz:**
+2. **Descrição do que o Commit Faz:**
    - Após o type, uma breve descrição da funcionalidade ou correção.
 
 ### Exemplos
