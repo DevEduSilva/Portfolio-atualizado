@@ -269,7 +269,7 @@ header .containerNav1 {
 
 #euMesmo {
     height: 100vh;
-    width: 60vw;
+    width: 48vw;
 }
 
 .textAbout {
@@ -580,19 +580,19 @@ header .containerNav1 {
 }
 
 .card:nth-child(2) {
-    background-image: url('../img/pokedex.png');
+    background-image: url('../img/landingPageInstrutor.png');
     background-size: cover;
     background-position: center;
 }
 
 .card:nth-child(3) {
-    background-image: url('../img/Work-In-Progress.jpg');
+    background-image: url('../img/formatador.png');
     background-size: cover;
     background-position: center;
 }
 
 .card:nth-child(4) {
-    background-image: url('../img/Work-In-Progress.jpg');
+    background-image: url('../img/quiz.png');
     background-size: cover;
     background-position: center;
 }
@@ -724,7 +724,7 @@ header .containerNav1 {
     }
 
     #carrousel {
-        height: 22vh;
+        height: 28vh;
         margin: 0 auto;
     }
 
